@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+~ Copyright (c) 2009 Nicolas Raoul <nicolas.raoul@gmail.com>
+~ Copyright (c) 2009 Edu Zamora <edu.zasu@gmail.com>
+~ Copyright (c) 2009 Jordi Chacon <jordi.chacon@gmail.com>
+~
+~ This program is free software; you can redistribute it and/or modify it under
+~ the terms of the GNU General Public License as published by the Free Software
+~ Foundation; either version 3 of the License, or (at your option) any later
+~ version.
+~
+~ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+~ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+~ PARTICULAR PURPOSE. See the GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License along with
+~ this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<CheckBoxPreference
+		android:title="Show timer / whiteboard"
+		android:defaultValue="true"
+		android:summary="Lets you write on the screen"
+		android:key="timerAndWhiteboard" />
+	<CheckBoxPreference
+		android:title="Sample deck"
+		android:defaultValue="true"
+		android:summary="Generate capitals deck if none found"
+		android:key="generateSampleDeck" />
+	<CheckBoxPreference
+		android:title="Corporal punishments"
+		android:defaultValue="false"
+		android:summary="Vibrate on error, that will teach you"
+		android:key="corporalPunishments" />	
+	<CheckBoxPreference
+		android:title="Write answers"
+		android:defaultValue="false"
+		android:summary="Lets you write the answer and compare it with the correct one"
+		android:key="writeAnswers" />
+	<!-- TODO implement this preference. Right now: always use notifications
+	<CheckBoxPreference
+		android:title="Update notifications"
+		android:defaultValue="true"
+		android:summary="Notify me when Ankidroid is updated"
+		android:key="enabled"/>
+	-->
+	<EditTextPreference
+		android:title="Deck path"
+		android:defaultValue="/sdcard"
+		android:summary="Path to where the your decks are stored"
+		android:key="deckPath" />
+</PreferenceScreen>

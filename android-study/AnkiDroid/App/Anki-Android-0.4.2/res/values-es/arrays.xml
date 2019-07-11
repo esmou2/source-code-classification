@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Generated with crowdin.net-->
+<resources>
+  <string-array name="newCardOrderLabels">
+    <item>Orden aleatorio</item>
+    <item>Orden añadido</item>
+    <item>Orden inverso del añadido</item>
+  </string-array>
+    <string-array name="newCardOrderVals">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>  
+    </string-array>
+    
+  <string-array name="newCardSchedulingLabels">
+    <item>Distribuir entre repasos</item>
+    <item>Después de los repasos</item>
+    <item>Antes de los repasos</item>
+  </string-array>
+    
+    <string-array name="newCardSchedulingVals">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>  
+    </string-array>
+    
+  <string-array name="revCardOrderLabels">
+    <item>Mayor intervalo primero</item>
+    <item>Menor intervalo primero</item>
+    <item>Orden programado</item>
+    <item>Orden aleatorio</item>
+  </string-array>
+    
+    <string-array name="revCardOrderVals">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    </string-array>
+    
+  <string-array name="failedCardOptionLabels">
+    <item>Mostrar tarjetas falladas próximamente</item>
+    <item>Mostrar tarjetas falladas al final&lt;</item>
+    <item>Mostrar tarjetas falladas en 10 minutos</item>
+    <item>Mostrar tarjetas falladas en 8 horas</item>  
+    <item>Mostrar tarjetas falladas en 3 días</item>   
+    </string-array>
+    
+    <string-array name="failedCardOptionVals">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+  </string-array>
+</resources>

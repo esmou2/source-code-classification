@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+~ Copyright (c) 2009 Nicolas Raoul <nicolas.raoul@gmail.com>
+~ Copyright (c) 2009 Edu Zamora <edu.zasu@gmail.com>
+~ Copyright (c) 2009 Jordi Chacon <jordi.chacon@gmail.com>
+~
+~ This program is free software; you can redistribute it and/or modify it under
+~ the terms of the GNU General Public License as published by the Free Software
+~ Foundation; either version 3 of the License, or (at your option) any later
+~ version.
+~
+~ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+~ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+~ PARTICULAR PURPOSE. See the GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License along with
+~ this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/pref_cat_decks">
+		<CheckBoxPreference
+			android:title="@string/sample_deck"
+			android:defaultValue="true"
+			android:summary="@string/sample_deck_summ"
+			android:key="generateSampleDeck" />
+		<EditTextPreference
+			android:title="@string/deck_path"
+			android:defaultValue="/sdcard"
+			android:summary="@string/deck_path_summ"
+			android:key="deckPath" />
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="@string/pref_cat_study">
+		<CheckBoxPreference
+			android:title="@string/show_whiteboard"
+			android:defaultValue="true"
+			android:summary="@string/show_whiteboard_summ"
+			android:key="timerAndWhiteboard" />
+		<CheckBoxPreference
+			android:title="@string/corporal_punishments"
+			android:defaultValue="false"
+			android:summary="@string/corporal_punishments_summ"
+			android:key="corporalPunishments" />
+		<CheckBoxPreference
+			android:title="@string/write_answers"
+			android:defaultValue="false"
+			android:summary="@string/write_answers_summ"
+			android:key="writeAnswers" />
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="@string/pref_cat_qadisplay">
+		<CheckBoxPreference
+			android:title="@string/use_ruby_support"
+			android:defaultValue="false"
+			android:summary="@string/use_ruby_support_summ"
+			android:key="useRubySupport" />
+		<ListPreference
+			android:title="@string/display_font_size"
+			android:summary="@string/display_font_size_summ"
+			android:key="displayFontSize"
+			android:defaultValue="100"
+			android:entries="@array/displayFontSizeLabels"
+			android:entryValues="@array/displayFontSizeVals" />
+		<ListPreference
+			android:title="@string/hide_question_in_answer"
+			android:summary="@string/hide_question_in_answer_summ"
+			android:key="hideQuestionInAnswer"
+			android:defaultValue="1"
+			android:entries="@array/hideQuestionInAnswerLabels"
+			android:entryValues="@array/hideQuestionInAnswerVals" />
+	</PreferenceCategory>
+	
+	<!-- TODO implement this preference. Right now: always use notifications
+	<CheckBoxPreference
+		android:title="Update notifications"
+		android:defaultValue="true"
+		android:summary="Notify me when AnkiDroid is updated"
+		android:key="enabled"/>
+	-->
+</PreferenceScreen>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+~ Copyright (c) 2009 Casey Link <unnamedrambler@gmail.com>
+~
+~ This program is free software; you can redistribute it and/or modify it under
+~ the terms of the GNU General Public License as published by the Free Software
+~ Foundation; either version 3 of the License, or (at your option) any later
+~ version.
+~
+~ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+~ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+~ PARTICULAR PURPOSE. See the GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License along with
+~ this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Study Options">
+            <EditTextPreference
+            android:title="New Cards / Day"
+            android:defaultValue="20"
+            android:summary="The maximum number of new cards shown per day."
+            android:numeric="integer" 
+            android:key="newCardsPDay" />
+
+            <EditTextPreference
+            android:title="Session Time Limit"
+            android:defaultValue="40"
+            android:summary="The number of minutes in a session. Choose 0 for no limit."
+            android:numeric="integer" 
+            android:key="sessionTLimit" />
+
+            <EditTextPreference
+            android:title="Session Question Limit"
+            android:defaultValue="0"
+            android:summary="The number of questions in a session. Choose 0 for no limit."
+            android:numeric="integer" 
+            android:key="sessionQLimit" />
+
+            <ListPreference
+            android:key="newCardOrder"
+            android:title="New Cards Order"
+            android:summary="The order in which to show new cards."
+            android:entries="@array/newCardOrderLabels"
+            android:entryValues="@array/newCardOrderVals"
+            android:dialogTitle="Show new cards in..." />
+
+            <ListPreference
+            android:key="newCardSpacing"
+            android:title="New Card Spacing"
+            android:summary="Where to distribute new cards during the review."
+            android:entries="@array/newCardSchedulingLabels"
+            android:entryValues="@array/newCardSchedulingVals"
+            android:dialogTitle="Show new cards..." />
+
+            <ListPreference
+            android:key="revCardOrder"
+            android:title="Review Cards Order"
+            android:summary="The order in which to show review cards."
+            android:entries="@array/revCardOrderLabels"
+            android:entryValues="@array/revCardOrderVals"
+            android:dialogTitle="Review cards in..." />
+    </PreferenceCategory>
+</PreferenceScreen>

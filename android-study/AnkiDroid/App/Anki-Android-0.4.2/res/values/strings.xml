@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+~ Copyright (c) 2009 Andrew <andrewdubya@gmail>
+~ Copyright (c) 2009 Edu Zamora <edu.zasu@gmail.com>
+~ Copyright (c) 2009 Daniel Svärd <daniel.svard@gmail.com>
+~ Copyright (c) 2009 Nicolas Raoul <nicolas.raoul@gmail.com>
+~
+~ This program is free software; you can redistribute it and/or modify it under
+~ the terms of the GNU General Public License as published by the Free Software
+~ Foundation; either version 3 of the License, or (at your option) any later
+~ version.
+~
+~ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+~ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+~ PARTICULAR PURPOSE. See the GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License along with
+~ this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources>
+    <string name="CardEditorCancelButton">Cancel</string>
+    <string name="CardEditorSaveButton">Save</string>
+
+
+<string name="app_name">AnkiDroid</string>
+
+<string name="yes">Yes</string>
+<string name="no">No</string>
+<string name="ok">OK</string>
+
+
+<string name="deck_not_loaded">Failed to load deck.</string>
+<string name="deck_not_loaded_detail">Please, press menu and select one of the decks stored in your sd card.</string>
+<string name="deck_empty">Deck is empty.</string>
+
+<color name="wb_fg_color">#B00000FF</color>
+<color name="wb_bg_color">#0000</color>
+
+<string name="card_template">&lt;html&gt;  &lt;head&gt;   &lt;link rel=\"stylesheet\" type=\"text/css\" href=\"file:///android_asset/flashcard_css\" /&gt; &lt;/head&gt; &lt;body&gt;  &lt;span class=\"card\"&gt; ::content:: &lt;/span&gt;  &lt;/body&gt; &lt;/html&gt;</string>
+
+<string name="deckpicker_title">Select a deck you copied to your SD card</string>
+<string name="deckpicker_title_nosdcard">SD card is unmounted</string>
+<string name="deckpicker_due">%1$d of %2$d due</string>
+<string name="deckpicker_new">%d new today</string>
+<string name="deckpicker_loaddeck">Loading deck...</string>
+<string name="deckpicker_nodeck">No decks found.</string>
+
+<string name="notify_ticker">Application Update</string>
+<string name="notify_title">AnkiDroid Updated</string>
+<string name="notify_message">Download a new version</string>
+<string name="notification_title">Confirm AnkiDroid Update</string>
+<string name="notification_message">A new version of AnkiDroid is available in Android Market.\n\nWould you like to install it?</string>
+<string name="notification_stop">Don\'t notify me of this update again</string>
+
+<string name="sdcard_missing_message">SD card is unavailable because it is being used as USB storage. Disconnect USB to access your decks.</string>
+
+
+
+<!-- deck_preferences.xml strings -->
+<string name="newcards_day_summ">The maximum number of new cards shown per day.</string>
+<string name="newcards_day">New Cards / Day</string>
+<string name="session_time_limit">Session Time Limit</string>
+<string name="session_time_limit_summ">The number of minutes in a session. Choose 0 for no limit.</string>
+<string name="session_question_limit">Session Question Limit</string>
+<string name="session_question_limit_summ">The number of questions in a session. Choose 0 for no limit.</string>
+<string name="new_cards_order">New Cards Order</string>
+<string name="new_cards_order_summ">The order in which to show new cards.</string>
+<string name="show_new_cards_in">Show new cards in...</string>
+<string name="new_card_spacing">New Card Spacing</string>
+<string name="new_card_spacing_summ">Where to distribute new cards during the review.</string>
+<string name="show_new_cards">Show new cards...</string>
+<string name="review_cards_order">Review Cards Order</string>
+<string name="review_cards_in">Review cards in...</string>
+<string name="review_cards_order_summ">The order in which to show review cards.</string>
+
+
+<!-- flashcard_portrait.xml strings -->
+<string name="overlay_on">Whiteboard On</string>
+<string name="overlay_off">Whiteboard Off</string>
+<string name="show_answer">Show Answer</string>
+<string name="show_question">Re-display Question</string>
+<string name="card_hint">Flashcard</string>
+<string name="count_hint">Counts</string>
+<string name="again">Again</string>
+<string name="hard">Hard</string>
+<string name="good">Good</string>
+<string name="easy">Easy</string>
+
+
+<!-- preferences.xml strings -->
+<string name="pref_cat_decks">Decks</string>
+<string name="pref_cat_sync">Synchronization</string>
+<string name="pref_cat_study">Study options</string>
+<string name="pref_cat_qadisplay">Question and answer display</string>
+<string name="username">Username</string>
+<string name="password">Password</string>
+<string name="sync_on_open">Sync on open</string>
+<string name="sync_on_close">Sync on close</string>
+<string name="show_whiteboard">Show timer / whiteboard</string>
+<string name="show_whiteboard_summ">Lets you write on the screen</string>
+<string name="sample_deck">Sample deck</string>
+<string name="sample_deck_summ">Generate capitals deck if none found</string>
+<string name="corporal_punishments">Corporal punishments</string>
+<string name="corporal_punishments_summ">Vibrate on error, that will teach you</string>
+<string name="write_answers">Write answers</string>
+<string name="write_answers_summ">Lets you write the answer and compare it with the correct one</string>
+<string name="use_ruby_support">Provide ruby annotation support</string>
+<string name="use_ruby_support_summ">If the characters \'[\' and \']\' are found, then the enclosed text is handled as a ruby annotation</string>
+<string name="display_font_size">Relative display font size</string>
+<string name="display_font_size_summ">The font size to use in the display relative to the definitions in the deck</string>
+<string name="hide_question_in_answer">Hide question in answer?</string>
+<string name="hide_question_in_answer_summ">Determines whether the question should be hidden when the answer is shown.</string>
+<string name="deck_path">Deck path</string>
+<string name="deck_path_summ">Path to where the your decks are stored</string>
+
+<!-- AndroidManifest.xml strings -->
+<string name="shareddeckpicker_title">Select the deck you want to download</string>
+<string name="preferences_title">Preferences</string>
+<string name="deckpreferences_title">Deck Preferences</string>
+<string name="about_title">About</string>
+<string name="cardeditor_title">Card Editor</string>
+
+<!-- AnkiDroid.java strings -->
+<string name="loading_new_card">Loading new card...</string>
+<string name="loading_deck">Loading deck. Please wait...</string>
+<string name="loading_shared_decks">Loading available shared decks...</string>
+<string name="connection_unsuccessful">The connection was unsuccessful. Check your connection settings and try again, please.</string>
+<string name="connection_needed">No Internet connection</string>
+<string name="preferences">Preferences</string>
+<string name="about">About</string>
+<string name="study_options">Study Options</string>
+<string name="suspend">Suspend</string>
+<string name="edit_card">Edit Card</string>
+<string name="switch_another_deck">Switch to another deck</string>
+<string name="get_shared_deck">Get shared deck</string>
+
+<!-- SharedDeckPicker.java -->
+<string name="downloading_shared_deck">Downloading shared deck...</string>
+
+<!-- SharedDeck.java -->
+<string name="fact">fact</string>
+<string name="facts">facts</string>
+
+<string name="saving_changes">Saving changes...</string>
+<string name="session_question_limit_reached">Session question limit reached</string>
+<string name="session_time_limit_reached">Session time limit reached</string>
+<string name="congratulations_finished_for_now">Congratulations! You have finished for now. Please come back tomorrow or switch to another deck.</string>
+<string name="about_content">&lt;html&gt;
+&lt;body&gt;
+&lt;h2&gt;AnkiDroid:&lt;br/&gt;
+Flashcards for Android&lt;/h2&gt;
+&lt;p&gt;AnkiDroid can read .anki files produced by the desktop &lt;a href=&quot;http://ichi2.net/anki&quot;&gt;Anki&lt;/a&gt; software.&lt;/p&gt;
+&lt;p&gt;To help us make AnkiDroid better, please report any bug &lt;a href=&quot;http://code.google.com/p/ankidroid/issues&quot;&gt;here&lt;/a&gt;, new feature ideas are very welcome too!
+Please use the &lt;a href=&quot;http://ichi2.net/anki/wiki/AndroidAnki&quot;&gt;wiki&lt;/a&gt; and say Hi on the &lt;a href=&quot;http://groups.google.com/group/anki-android&quot;&gt;forum&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;AnkiDroid is &lt;a href=&quot;http://en.wikipedia.org/wiki/Open_source_software&quot;&gt;open source software&lt;/a&gt;, so everyone is encouraged to &lt;a href=&quot;http://ichi2.net/anki/wiki/ContributeToAnkiDroid&quot;&gt;join&lt;/a&gt; the &lt;a href=&quot;http://ichi2.net/anki/wiki/AnkiDroidContributors&quot;&gt;contributors&lt;/a&gt; :-)
+Non-developers can also help, for instance by updating the wiki and screenshots, &lt;a href=&quot;http://ichi2.net/anki/donate.html&quot;&gt;donating&lt;/a&gt; to Anki, or blogging about AnkiDroid!&lt;/p&gt;
+&lt;p&gt;AnkiDroid is released under the &lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;GNU-GPL v3 license&lt;/a&gt; and the source code is available &lt;a href=&quot;http://github.com/nicolas-raoul/Anki-Android&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</string>
+<string name="review_early">Review Early</string>
+
+<!-- ErrorReporter.java -->
+<string name="error_message">There are %d errors to report</string>
+<string name="error_ok">Report errors</string>
+<string name="error_cancel">Do not report errors</string>
+<string name="error_email">ankidroid@gmail.com</string>
+</resources>

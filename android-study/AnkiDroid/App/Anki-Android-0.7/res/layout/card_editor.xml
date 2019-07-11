@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="fill_parent"
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/CardEditorScroll"
+	android:padding="10dp">
+	<LinearLayout android:id="@+id/CardEditorLayout"
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:id="@+id/CardEditorEditFieldsLayout"
+			android:orientation="vertical"></LinearLayout>
+		<Button android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:id="@+id/CardEditorTagButton"
+			android:text="@string/CardEditorTags"
+			android:layout_gravity="center"
+			android:gravity="left|center_vertical"
+			android:layout_marginTop="10dp"/>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:orientation="horizontal"
+			android:layout_marginTop="10dp"
+			android:layout_gravity="right" 
+			android:id="@+id/CardEditorButtons">
+			<Button android:layout_width="0dip"
+				android:layout_height="fill_parent" 
+				android:id="@+id/CardEditorSaveButton"
+				android:text="@string/CardEditorSaveButton"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:layout_weight="1"/>
+			<Button android:layout_width="0dip"
+				android:layout_height="fill_parent" 
+				android:id="@+id/CardEditorCancelButton"
+				android:text="@string/CardEditorCancelButton"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:layout_weight="1"/>
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

@@ -1,0 +1,15 @@
+AnkiDroid: Anki on Android
+See http://ichi2.net/anki/wiki/AndroidAnki
+
+=== Running with Ant ===
+
+1. Create a "local.properties" file containing the path to the Android SDK, for instance:
+sdk.dir=/home/nico/programs/android-sdk
+
+2. Plug in your Android phone via USB and run the following command: ant install-device
+
+3. To install on an emulator run: ant install-emulator
+
+=== Zeemote JS1 support ===
+
+The controller must be paired first.  Turn on Bluetooth, Go to Preferences -> Navigation and check "Zeemote support".  Restart AnkiDroid.  Start reviewing a deck and use the zeemote buttons to show answers and answer cards (A - Good, B - Fail, D - Easy).

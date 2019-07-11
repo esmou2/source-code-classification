@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+~ Copyright (c) 2009 Daniel Svärd <daniel.svard@gmail.com>
+~
+~ This program is free software; you can redistribute it and/or modify it under
+~ the terms of the GNU General Public License as published by the Free Software
+~ Foundation; either version 3 of the License, or (at your option) any later
+~ version.
+~
+~ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+~ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+~ PARTICULAR PURPOSE. See the GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License along with
+~ this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" 
+	android:layout_width="fill_parent" 
+	android:orientation="vertical"
+	android:id="@+id/deckpicker_deck">
+
+	<LinearLayout 
+		android:id="@+id/DeckPickerHoriz" 
+		android:layout_height="wrap_content" 
+		android:orientation="horizontal"
+		android:layout_width="fill_parent">
+
+		<TextView 
+			android:id="@+id/DeckPickerName" 
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent"
+			android:gravity="center_horizontal"
+			android:layout_weight="1"
+			android:padding="5dip"
+			android:textSize="24sp">
+		</TextView>
+		<Button
+			android:id="@+id/DeckPickerUpgradeNotesButton"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:layout_weight="4"
+			android:paddingLeft="10dip"
+			android:textSize="14sp"
+			android:focusable="false"
+			android:focusableInTouchMode="false"
+			android:text="@string/deckpicker_upgrade_notes_button"/>
+	</LinearLayout>
+
+	<RelativeLayout 
+		android:id="@+id/DeckPickerHoriz" 
+		android:layout_height="wrap_content" 
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent">
+		
+		<TextView 
+			android:id="@+id/DeckPickerDue" 
+			android:layout_height="wrap_content" 
+			android:layout_width="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_toLeftOf="@+id/DeckPickerNew"
+			android:paddingLeft="10dip"
+			android:paddingRight="5dip"
+			android:paddingBottom="5dip"
+			android:maxLines="2"
+			android:textSize="17sp">
+		</TextView>
+		
+		<TextView 
+			android:id="@+id/DeckPickerNew" 
+			android:layout_height="wrap_content" 
+			android:layout_width="wrap_content"
+			android:layout_alignParentRight="true"
+			android:paddingRight="10dip"
+			android:paddingLeft="5dip"
+			android:paddingBottom="5dip"
+			android:maxLines="2"
+			android:textSize="17sp">
+		</TextView>
+		
+		<ProgressBar
+			android:id="@+id/DeckPickerProgress"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_alignParentRight="true"
+			android:indeterminate="true" 
+			android:paddingRight="10dip"
+			android:paddingLeft="5dip"
+			android:paddingBottom="5dip"
+			style="?android:attr/progressBarStyleSmall">
+		</ProgressBar>
+		
+
+	</RelativeLayout>
+	<LinearLayout 
+		android:layout_height="wrap_content" 
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent">
+	<TextView
+		android:id="@+id/DeckPickerCompletionMat"
+    	android:layout_width="0dip"
+    	android:layout_height="2dip"
+    	android:background="#ffffff"
+		android:paddingBottom="5dip"/>
+	<TextView
+		android:id="@+id/DeckPickerCompletionAll"
+    	android:layout_width="0dip"
+    	android:layout_height="2dip"
+    	android:background="#808080"
+		android:paddingBottom="5dip"/>
+	</LinearLayout>
+</LinearLayout>

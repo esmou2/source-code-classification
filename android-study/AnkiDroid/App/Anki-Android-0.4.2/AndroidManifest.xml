@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+~ Copyright (c) 2009 Andrew <andrewdubya@gmail>
+~ Copyright (c) 2009 Nicolas Raoul <nicolas.raoul@gmail.com>
+~ Copyright (c) 2009 Edu Zamora <edu.zasu@gmail.com>
+~ Copyright (c) 2009 Casey Link <unnamedrambler@gmail.com>
+~
+~ This program is free software; you can redistribute it and/or modify it under
+~ the terms of the GNU General Public License as published by the Free Software
+~ Foundation; either version 3 of the License, or (at your option) any later
+~ version.
+~
+~ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+~ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+~ PARTICULAR PURPOSE. See the GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License along with
+~ this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.ichi2.anki"
+			android:versionName="0.4.2" android:versionCode="12"
+			android:installLocation="auto">
+    <application android:label="@string/app_name" android:icon="@drawable/anki" android:name="AnkiDroidApp" android:debuggable="false">
+        <activity android:name=".AnkiDroid" android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DeckPicker" android:label="@string/deckpicker_title" />
+        <activity android:name="SharedDeckPicker" android:label="@string/shareddeckpicker_title" />
+        <activity android:name="Preferences" android:label="@string/preferences_title" />
+        <activity android:name="DeckPreferences" android:label="@string/deckpreferences_title" />
+        <activity android:name="About" android:label="@string/about_title" />
+        <activity android:name="com.ichi2.veecheck.Notification" android:label="@string/notification_title"/>
+        <activity android:name="ErrorReporter" android:label="Error Reporter"></activity>
+        <receiver android:name="com.ichi2.veecheck.CheckReceiver">
+			<intent-filter>
+				<action
+					android:name="com.ichi2.anki.VEECHECK_RESCHEDULE_CHECKS">
+				</action>
+			</intent-filter>
+			<intent-filter>
+				<action
+					android:name="com.ichi2.anki.VEECHECK_CONSIDER_CHECK">
+				</action>
+			</intent-filter>
+		</receiver>
+		<service android:name="com.ichi2.veecheck.CheckService">
+			<intent-filter>
+				<action
+					android:name="com.ichi2.anki.VEECHECK_PERFORM_CHECK">
+				</action>
+				<data android:scheme="http"></data>
+			</intent-filter>
+		</service>
+		<provider android:name="AnkiDroidContentProvider" android:authorities="com.ichi2.anki"/>
+    	<activity android:name="CardEditor" android:label="@string/cardeditor_title"></activity>
+
+    	<!-- Broadcast Receiver that will process AppWidget updates -->
+		<receiver android:name=".AnkiDroidWidget" android:label="AnkiDroid">
+		    <intent-filter>
+		        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+		    </intent-filter>
+	    	<meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_ankidroid" />
+		</receiver>
+	
+		<!-- Service to perform web API queries -->
+		<service android:name=".AnkiDroidWidget$UpdateService" />
+</application>
+    <uses-sdk android:minSdkVersion="3"/>
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<supports-screens 
+	     android:largeScreens="true" 
+	     android:normalScreens="true" 
+	     android:smallScreens="true" 
+	     android:anyDensity="true"/>
+</manifest>

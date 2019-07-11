@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+~ Copyright (c) 2009 Andrew <andrewdubya@gmail> 
+~ Copyright (c) 2009 Nicolas Raoul <nicolas.raoul@gmail.com> 
+~ Copyright (c) 2009 Edu Zamora <edu.zasu@gmail.com> 
+~ Copyright (c) 2009 Jordi Chacon <jordi.chacon@gmail.com> 
+~ Copyright (c) 2010 Norbert Nagold <norbert.nagold@gmail.com>
+~
+~ This program is free software; you can redistribute it and/or modify it under
+~ the terms of the GNU General Public License as published by the Free Software
+~ Foundation; either version 3 of the License, or (at your option) any later
+~ version.
+~
+~ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+~ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+~ PARTICULAR PURPOSE. See the GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License along with
+~ this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/main_layout" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#ffffff">
+
+	<!-- Top bar -->
+	<RelativeLayout android:id="@+id/top_bar"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+	<TextView android:id="@+id/red_number"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingLeft="9dp"
+		android:layout_marginTop="4dp"
+		android:text=""
+		android:textSize="14dip"
+		android:textColor="#ff0000" />
+	<TextView android:id="@+id/black_number"
+		android:layout_toRightOf="@+id/red_number"
+		android:layout_alignTop="@+id/red_number"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingLeft="8dp"
+		android:text=""
+		android:textSize="14dip"
+		android:textColor="#000000" />
+	<TextView android:id="@+id/blue_number"
+		android:layout_toRightOf="@+id/black_number"
+		android:layout_alignTop="@+id/red_number"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingLeft="8dp"
+		android:text=""
+		android:textSize="14dip"
+		android:textColor="@color/textbar_blue_color" />
+	<TextView android:id="@+id/choosen_answer"
+		android:layout_centerHorizontal="true"
+		android:layout_alignTop="@+id/red_number"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text=""
+		android:textSize="14dip"/>
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/red_number"
+		android:layout_alignParentRight="true"
+		android:paddingRight="5dp">
+		<LinearLayout android:id="@+id/progress_bars"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:layout_alignTop="@+id/card_time"
+			android:layout_toLeftOf="@+id/card_time"
+			android:orientation="vertical"
+			android:gravity="center"
+			android:visibility="invisible"
+			android:paddingRight="8dp">
+			<FrameLayout android:id="@+id/progress_bars_border1"
+				android:background="#808080"
+				android:layout_width="42dp"
+				android:layout_height="4dp"
+				android:padding="0.5dip"
+				android:layout_marginBottom="1dp">	
+				<FrameLayout android:id="@+id/progress_bars_back1"
+					android:background="#ffffff"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent">
+					<View android:id="@+id/session_progress"
+						android:layout_width="0dip"
+						android:layout_height="fill_parent"
+						android:background="#323232"/>
+				</FrameLayout>
+			</FrameLayout>
+			<FrameLayout android:id="@+id/progress_bars_border2"
+				android:background="#808080"
+				android:layout_width="42dp"
+				android:layout_height="4dp"
+				android:padding="0.5dip">
+				<FrameLayout android:id="@+id/progress_bars_back2"
+					android:background="#ffffff"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent">
+					<View android:id="@+id/daily_bar"
+						android:layout_width="0dip"
+						android:layout_height="fill_parent"
+						android:background="#000000"/>
+				</FrameLayout>
+			</FrameLayout>
+		</LinearLayout>
+		<Chronometer android:id="@+id/card_time"
+			android:layout_alignParentRight="true"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		android:paddingRight="4dp"
+		android:textSize="14dip"
+		android:visibility="invisible"
+			android:gravity="right"
+			android:textColor="#000000" />
+	</LinearLayout>
+</RelativeLayout>
+	<!-- Card and whiteboard -->
+	<FrameLayout android:id="@+id/flashcard_frame"
+		android:layout_margin="3dip"
+		android:layout_below="@+id/top_bar"
+		android:layout_above="@+id/answer_nextTime_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<FrameLayout android:id="@+id/flashcard"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"/>
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent">			
+			<FrameLayout android:id="@+id/touch_layer"
+				android:layout_marginTop="20dip"
+				android:longClickable="true"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"/>
+		</LinearLayout>
+		<FrameLayout android:id="@+id/whiteboard"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"/>
+		<ImageView android:id="@+id/lookup_button"
+			android:padding="5dip"
+			android:layout_gravity="right"
+			android:src="@drawable/ic_lookup"
+			android:visibility="gone"
+			android:clickable="true"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		<FrameLayout android:id="@+id/flashcard_border"
+			android:visibility="gone"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"/>
+	</FrameLayout>
+	<LinearLayout android:id="@+id/answer_nextTime_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="1dp"
+		android:layout_above="@+id/bottom_area_layout">
+		<TextView android:id="@+id/nextTime1"
+			android:textColor="@color/next_time_failed_color"
+			android:layout_width="0dip"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"
+			android:layout_gravity="center"
+			android:gravity="bottom|center_horizontal"/>
+		<include android:id="@+id/nextTime2" layout="@layout/next_time_textview" />
+		<include android:id="@+id/nextTime3" layout="@layout/next_time_textview" />
+		<include android:id="@+id/nextTime4" layout="@layout/next_time_textview" />
+	</LinearLayout>
+
+	<LinearLayout android:id="@+id/bottom_area_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_alignParentBottom="true" >
+		
+			<!-- Answer bar -->
+		<EditText android:id="@+id/answer_field"
+			android:layout_above="@+id/flip_card"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:maxLines="2" />
+
+		<include android:id="@+id/flip_card"
+			layout="@layout/bottom_button"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_above="@+id/answer_options_layout" />
+		
+		<LinearLayout android:id="@+id/answer_options_layout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true" >
+			<include android:id="@+id/ease1" layout="@layout/bottom_button" />
+			<include android:id="@+id/ease2" layout="@layout/bottom_button" />
+			<include android:id="@+id/ease3" layout="@layout/bottom_button" />
+			<include android:id="@+id/ease4" layout="@layout/bottom_button" />
+		</LinearLayout>
+	</LinearLayout>
+
+</RelativeLayout>

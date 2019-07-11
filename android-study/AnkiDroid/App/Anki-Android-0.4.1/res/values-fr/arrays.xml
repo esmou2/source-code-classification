@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Generated with crowdin.net-->
+<resources>
+  <string-array name="newCardOrderLabels">
+    <item>Ordre aléatoire</item>
+    <item>Ordre d\'ajout</item>
+    <item>Ordre d\'ajout inverse</item>
+  </string-array>
+    <string-array name="newCardOrderVals">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>  
+    </string-array>
+    
+  <string-array name="newCardSchedulingLabels">
+    <item>Distribuer parmi les révisions</item>
+    <item>Après les révisions</item>
+    <item>Avant les révisions</item>
+  </string-array>
+    
+    <string-array name="newCardSchedulingVals">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>  
+    </string-array>
+    
+  <string-array name="revCardOrderLabels">
+    <item>Longs intervalles d\'abord</item>
+    <item>Courts intervalles d\'abord</item>
+    <item>Ordre dû</item>
+    <item>Ordre aléatoire</item>
+  </string-array>
+    
+    <string-array name="revCardOrderVals">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    </string-array>
+    
+  <string-array name="failedCardOptionLabels">
+    <item>Revoir les cartes ratées bientot</item>
+    <item>Revoir les cartes ratées à la fin</item>
+    <item>Revoir les cartes ratées dans 10 minutes</item>
+    <item>Revoir les cartes ratées dans 8 heures</item>
+    <item>Revoir les cartes ratées dans 3 jours</item>
+    </string-array>
+    
+    <string-array name="failedCardOptionVals">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+  </string-array>
+</resources>

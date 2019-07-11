@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Generated with crowdin.net-->
+<resources>
+  <string-array name="newCardOrderLabels">
+    <item>Ordre aleatori</item>
+    <item>Ordre afegit</item>
+    <item>Ordre invers de l\'afegit</item>
+  </string-array>
+    <string-array name="newCardOrderVals">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>  
+    </string-array>
+    
+  <string-array name="newCardSchedulingLabels">
+    <item>Distribuir entre repassades</item>
+    <item>Després de les repassades</item>
+    <item>Abans de les repassades</item>
+  </string-array>
+    
+    <string-array name="newCardSchedulingVals">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>  
+    </string-array>
+    
+  <string-array name="revCardOrderLabels">
+    <item>Major interval primer</item>
+    <item>Menor interval primer</item>
+    <item>Ordre programat</item>
+    <item>Ordre aleatori</item>
+  </string-array>
+    
+    <string-array name="revCardOrderVals">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    </string-array>
+    
+  <string-array name="failedCardOptionLabels">
+    <item>Mostrar targetes fallades pròximament</item>
+    <item>Mostrar targetes fallades al final</item>
+    <item>Mostrar targetes fallades en 10 minuts</item>
+    <item>Mostrar targetes fallades en 8 hores</item>  
+    <item>Mostrar targetes fallades en 3 dies</item>   
+    </string-array>
+    
+    <string-array name="failedCardOptionVals">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+  </string-array>
+</resources>

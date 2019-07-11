@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+~ Copyright (c) 2009 Andrew <andrewdubya@gmail>
+~ Copyright (c) 2009 Nicolas Raoul <nicolas.raoul@gmail.com>
+~ Copyright (c) 2009 Edu Zamora <edu.zasu@gmail.com>
+~ Copyright (c) 2009 Casey Link <unnamedrambler@gmail.com>
+~
+~ This program is free software; you can redistribute it and/or modify it under
+~ the terms of the GNU General Public License as published by the Free Software
+~ Foundation; either version 3 of the License, or (at your option) any later
+~ version.
+~
+~ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+~ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+~ PARTICULAR PURPOSE. See the GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License along with
+~ this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.ichi2.anki"
+      android:versionName="0.4" android:versionCode="10">
+    <application android:label="@string/app_name" android:icon="@drawable/anki" android:name="AnkidroidApp" android:debuggable="false">
+        <activity android:name=".Ankidroid" android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar" android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="DeckPicker" android:label="@string/deckpicker_title" />
+        <activity android:name="Preferences" android:label="Preferences" />
+        <activity android:name="DeckPreferences" android:label="Deck Preferences" />
+        <activity android:name="About" android:label="About" />
+        <activity android:name="com.ichi2.veecheck.Notification" android:label="@string/notification_title"/>
+        <receiver android:name="com.ichi2.veecheck.CheckReceiver">
+			<intent-filter>
+				<action
+					android:name="com.ichi2.anki.VEECHECK_RESCHEDULE_CHECKS">
+				</action>
+			</intent-filter>
+			<intent-filter>
+				<action
+					android:name="com.ichi2.anki.VEECHECK_CONSIDER_CHECK">
+				</action>
+			</intent-filter>
+		</receiver>
+		<service android:name="com.ichi2.veecheck.CheckService">
+			<intent-filter>
+				<action
+					android:name="com.ichi2.anki.VEECHECK_PERFORM_CHECK">
+				</action>
+				<data android:scheme="http"></data>
+			</intent-filter>
+		</service>
+		<provider android:name="AnkidroidContentProvider" android:authorities="com.ichi2.anki"/>
+    <activity android:name="CardEditor" android:label="Card Editor"></activity>
+    </application>
+    <uses-sdk android:minSdkVersion="3"/>
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<supports-screens 
+	     android:largeScreens="true" 
+	     android:normalScreens="true" 
+	     android:smallScreens="true" 
+	     android:anyDensity="true"/>
+</manifest>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Generated with crowdin.net-->
+<resources>
+  <string-array name="newCardOrderLabels">
+    <item>Ordem aleatória</item>
+    <item>Ordem de Adição</item>
+    <item>Ordem inversa de à de Adição</item>
+  </string-array>
+    <string-array name="newCardOrderVals">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>  
+    </string-array>
+    
+  <string-array name="newCardSchedulingLabels">
+    <item>Espalhar entre revisões</item>
+    <item>Depois das revisões</item>
+    <item>Antes das revisões</item>
+  </string-array>
+    
+    <string-array name="newCardSchedulingVals">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>  
+    </string-array>
+    
+  <string-array name="revCardOrderLabels">
+    <item>Intervalo maior primeiro</item>
+    <item>Intervalo menor primeiro</item>
+    <item>Ordem Programada</item>
+    <item>Ordem aleatória</item>
+  </string-array>
+    
+    <string-array name="revCardOrderVals">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    </string-array>
+    
+  <string-array name="failedCardOptionLabels">
+    <item>Mostrar cards errados logo</item>
+    <item>Mostrar cards errados no final</item>
+    <item>Mostrar cards errados em 10 minutos</item>
+    <item>Mostrar cards errados em 8 horas</item>  
+    <item>Mostrar cards errados em 3 dias</item>   
+    </string-array>
+    
+    <string-array name="failedCardOptionVals">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+  </string-array>
+</resources>
